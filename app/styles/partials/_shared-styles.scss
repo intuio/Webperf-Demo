@@ -1,5 +1,3 @@
-@import "variables";
-
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -12,25 +10,24 @@ body {
     margin: 0;
 }
 
-%btn {
+.btn {
     border-radius: 3px;
     font-family: Helvetica, Arial;
     padding: 15px;
     text-decoration: initial;
     cursor: pointer;
-}
 
-.next-link {
-    @extend %btn;
-    position: absolute;
-    top: 20px;
-    right: 200px;
-    color: $red;
-    font-size: 1.6rem;
-    border: 3px solid $red;
+    &--next {
+        position: absolute;
+        top: 20px;
+        right: 200px;
+        color: $red;
+        font-size: 1.6rem;
+        border: 3px solid $red;
 
-    &:hover {
-        background-color: $red;
-        color: $white;
+        &:hover {
+            background-color: $red;
+            color: $white;
+        }
     }
 }

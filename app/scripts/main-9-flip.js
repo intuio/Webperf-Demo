@@ -8,7 +8,7 @@ mover.addEventListener('click', function() {
     var firstPosition = mover.getBoundingClientRect(); // Layout forced btw.
 
     // LAST
-    mover.classList.toggle('mover--moved');
+    mover.classList.toggle('btn-mover--moved');
     var lastPosition = mover.getBoundingClientRect(); // Layout forced btw.
 
     // INVERT

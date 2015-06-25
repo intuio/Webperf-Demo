@@ -15,8 +15,7 @@
     position: relative;
 }
 
-.mover {
-    @extend %btn;
+.btn-mover {
     position: absolute;
     background-color: $blue;
     width: 200px;
