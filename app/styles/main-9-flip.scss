@@ -20,6 +20,7 @@
     width: 200px;
     text-align: center;
     color: $white;
+    will-change: transform;
 
     &--moved {
         bottom: 10px;
