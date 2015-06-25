@@ -6,12 +6,11 @@
 }
 
 .container {
-    background-color: $red;
+    background-color: rgba($red, 0.5);
     width: 50vw;
     height: 50vh;
     margin: 20px;
     padding: 10px;
-    opacity: 0.7;
     position: relative;
 }
 
