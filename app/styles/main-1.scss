@@ -1,0 +1,19 @@
+@import "partials/variables";
+@import "partials/shared-styles";
+
+.smiley {
+    width: 100px;
+    height: 100px;
+    background: yellow;
+    border-radius: 50%;
+    position: absolute;
+    left: 100px;
+    top: 100px;
+    opacity: 0.5;
+
+    @for $i from 0 through $elements {
+        &:nth-child(#{$i}) {
+            background: adjust-hue($red, $i * (365deg/$elements));
+        }
+    }
+}

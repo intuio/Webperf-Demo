@@ -1,0 +1,36 @@
+@import "variables";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("/images/mountains.jpg");
+    background-color: $grey;
+    background-blend-mode: multiply;
+    background-size: cover;
+    margin: 0;
+}
+
+%btn {
+    border-radius: 3px;
+    font-family: Helvetica, Arial;
+    padding: 15px;
+    text-decoration: initial;
+    cursor: pointer;
+}
+
+.next-link {
+    @extend %btn;
+    position: absolute;
+    top: 20px;
+    right: 200px;
+    color: $red;
+    font-size: 1.6rem;
+    border: 3px solid $red;
+
+    &:hover {
+        background-color: $red;
+        color: $white;
+    }
+}

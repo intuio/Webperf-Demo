@@ -1,0 +1,30 @@
+@import "partials/variables";
+@import "partials/shared-styles";
+
+.has-transition {
+    transition: all 2s;
+}
+
+.container {
+    background-color: $red;
+    width: 50vw;
+    height: 50vh;
+    margin: 20px;
+    padding: 10px;
+    opacity: 0.7;
+    position: relative;
+}
+
+.mover {
+    @extend %btn;
+    position: absolute;
+    background-color: $blue;
+    width: 200px;
+    text-align: center;
+    color: $white;
+
+    &--moved {
+        bottom: 10px;
+        right: 10px;
+    }
+}
