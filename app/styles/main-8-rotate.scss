@@ -16,7 +16,7 @@
     height: 500px;
 }
 
-.smiley {
+.circle {
     width: 100px;
     height: 100px;
     background: yellow;
@@ -27,7 +27,7 @@
 
     @for $i from 0 through $elements {
         &:nth-child(#{$i}) {
-            background: adjust-hue($red, $i * (365deg/$elements));
+            background: adjust-hue($red, $i * (360deg/$elements));
             left: sin($i * (6.3/$elements)) * 200 + 200px;
             top: cos($i * (6.3/$elements)) * 200 + 200px;
         }

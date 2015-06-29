@@ -2,7 +2,7 @@
 @import "partials/shared-styles";
 
 // Thanks again to Paul Lewis for explaining the impact of shadows
-.smiley {
+.circle {
     width: 100px;
     height: 100px;
     background: yellow;
@@ -15,7 +15,7 @@
 
     @for $i from 0 through $elements {
         &:nth-child(#{$i}) {
-            background: adjust-hue($red, $i * (365deg/$elements));
+            background: adjust-hue($red, $i * (360deg/$elements));
         }
     }
 }
