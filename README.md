@@ -3,7 +3,7 @@
 ## Setup
 
 ```shell
-npm install
+npm install && mkdir bower_components
 ```
 
 ## Running
