@@ -1,13 +1,7 @@
-# Jank Demos for the Hamburg Webperf Meetup
+# Jank Demos
 
-## Setup
-
-```shell
-npm install && mkdir bower_components
-```
-
-## Running
+## Running the demo
 
 ```shell
-grunt serve
+npm start
 ```

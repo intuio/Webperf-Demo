@@ -1,5 +1,8 @@
 {
   "name": "jank-busting",
+  "scripts": {
+    "start" : "npm install && grunt serve"
+  },
   "devDependencies": {
     "apache-server-configs": "^2.7.1",
     "grunt": "^0.4.5",
