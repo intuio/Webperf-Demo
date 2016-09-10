@@ -146,8 +146,7 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
-//        loadPath: 'bower_components',
-        compass: true
+        includePaths: ['node_modules/sass-math/'],
       },
       dist: {
         files: [{
