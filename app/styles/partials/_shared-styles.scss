@@ -10,17 +10,43 @@ body {
     margin: 0;
 }
 
+.l-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-around;
+}
+
+.headline, .author {
+    color: $blue;
+    font-family: 'Roboto Slab', serif;
+    font-weight: normal;
+    width: 100%;
+    text-align: center;
+}
+
+.headline {
+    font-size: 4rem;
+}
+
+.logo {
+    width: 200px;
+    mix-blend-mode: exclusion;
+}
+
 .btn {
     border-radius: 3px;
-    font-family: Helvetica, Arial;
+    font-family: 'Roboto Slab', serif;
     padding: 15px;
     text-decoration: initial;
     cursor: pointer;
 
     &--next {
         position: absolute;
-        top: 20px;
-        right: 200px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 25px;
         color: $red;
         font-size: 1.6rem;
         border: 3px solid $red;
