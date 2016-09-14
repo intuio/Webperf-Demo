@@ -2,7 +2,6 @@
 
 const circles = document.getElementsByClassName('circle');
 const elementWidth = 100;
-let time = 0;
 
 // Based on https://gist.github.com/addyosmani/5434533
 const limitLoop = function limitLoop(fn, fps = 60) {
@@ -11,7 +10,7 @@ const limitLoop = function limitLoop(fn, fps = 60) {
     // custom fps, otherwise fallback to 60
     const interval = 1000 / fps;
 
-    return (function loop() {
+    return (function loop(timestamp) {
         requestAnimationFrame(loop);
 
         // again, Date.now() if it's available
@@ -25,22 +24,22 @@ const limitLoop = function limitLoop(fn, fps = 60) {
             then = now - (delta % interval);
 
             // call the fn
-            fn();
+            fn(timestamp);
         }
     }(0));
 };
 
-function moveCircle(i) {
-    const left = `${Math.sin(time + i * (6.3 / circles.length)) * 2 * elementWidth + 300}px`;
-    const top = `${Math.cos(time + i * (6.3 / circles.length)) * 2 * elementWidth + 300}px`;
+function moveCircle(i, timestamp) {
+    const time = timestamp / 2000;
+    const offset = 200;
+    const left = `${Math.sin(time + i * (6.3 / circles.length)) * 2 * elementWidth + offset}px`;
+    const top = `${Math.cos(time + i * (6.3 / circles.length)) * 2 * elementWidth + offset}px`;
     return `translate(${left}, ${top})`;
 }
 
-function update() {
-    time += 0.01;
-
+function update(timestamp) {
     for (let i = 0; i < circles.length; i++) {
-        circles[i].style.transform = moveCircle(i);
+        circles[i].style.transform = moveCircle(i, timestamp);
     }
 }
 
