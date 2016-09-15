@@ -1,5 +1,3 @@
-'use strict';
-
 const circles = document.getElementsByClassName('circle');
 let start = null;
 

@@ -1,7 +1,5 @@
-'use strict';
+const mover = document.getElementsByClassName('js_move')[0];
 
-var mover = document.getElementsByClassName('js_move')[0];
-
-mover.addEventListener('click', function() {
-    mover.classList.toggle('btn-mover--moved');
-});
+mover.addEventListener('click', () =>
+    mover.classList.toggle('btn-mover--moved')
+);

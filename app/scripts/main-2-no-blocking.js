@@ -1,5 +1,3 @@
-'use strict';
-
 const circles = document.getElementsByClassName('circle');
 const elementWidth = 100;
 let start = null;

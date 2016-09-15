@@ -1,30 +1,29 @@
-'use strict';
-
-var mover = document.getElementsByClassName('js_move')[0];
+const mover = document.getElementsByClassName('js_move')[0];
 
 // Pattern by Paul Lewis: https://aerotwist.com/blog/flip-your-animations/
-mover.addEventListener('click', function() {
+mover.addEventListener('click', () => {
     // FIRST
-    var firstPosition = mover.getBoundingClientRect(); // Layout forced btw.
+    const firstPosition = mover.getBoundingClientRect(); // Layout forced btw.
 
     // LAST
     mover.classList.toggle('btn-mover--moved');
-    var lastPosition = mover.getBoundingClientRect(); // Layout forced btw.
+    const lastPosition = mover.getBoundingClientRect(); // Layout forced btw.
 
     // INVERT
-    var invertPosition = {
+    const invertPosition = {
         top: firstPosition.top - lastPosition.top,
-        left: firstPosition.left - lastPosition.left};
-    mover.style.transform = 'translate(' + invertPosition.left + 'px, ' + invertPosition.top + 'px)';
+        left: firstPosition.left - lastPosition.left
+    };
+    mover.style.transform = `translate(${invertPosition.left}px, ${invertPosition.top}px`;
 
     // PLAY
-    requestAnimationFrame(function() {
-      mover.classList.add('has-transition');
-      mover.style.transform = '';
+    requestAnimationFrame(() => {
+        mover.classList.add('has-transition');
+        mover.style.transform = '';
     });
 
     // RESET
-    mover.addEventListener('transitionend', function(){
+    mover.addEventListener('transitionend', () => {
         mover.classList.remove('has-transition');
     });
 });
